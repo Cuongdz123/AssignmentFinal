@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="text.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="loadAnh();">
+    <div class="header">
+        <!-- <h3>Album ảnh làng quê Việt Nam</h3> -->
+        <img id="slideshow" class = "slideshow "src="./img/anh0.png">
+        <img class="backbt" src="./sanpham/backbt.png" onclick="back()" onchange="back()">
+        <img class="nextbt"src="./sanpham/nextbt.png" onclick="next()" onchange="next()">
+        <div class="ds">
+            <span id="soanh"></span>
+        </div>
+    </div>
+    <!-- <div class="giohang">
+        <a onclick="showcart();" href="Giohang.html"><img src="./sanpham/ghbt2.png"><span id="countsp">0</span></a>
+    </div>    -->
+    <div class="nagivation">
+        <span id="chung">Đồng Hồ</span> <span id="chung">Điện Thoại</span> <span id="chung">Máy Tính</span> <span id="chung">Khác</span>
+        <a id="dn" href="Dangnhap.html">Đăng Nhập</a> <span id="dk">Đăng Ký</span>
+    </div>
+    <h1>GIỎ HÀNG CỦA BẠN</h1> <br>
+    <div class="giohanght">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền (đ)</th>
+            </tr>
+            <tbody id="mycart">
+
+            </tbody>
+
+        </table>
+    </div>
+        
+    <script>
+        setInterval(loadAnh, 3000);
+    </script>
+    <script>
+        showmycart()
+    </script>
+</body>
+</html>

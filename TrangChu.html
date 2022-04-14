@@ -1,0 +1,177 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="text.js"></script>
+    <title>Document</title>
+</head>
+<body onload="loadAnh();">
+    <div class="header">
+        <!-- <h3>Album ảnh làng quê Việt Nam</h3> -->
+        <img id="slideshow" class = "slideshow "src="./img/anh0.png">
+        <img class="backbt" src="./sanpham/backbt.png" onclick="back()" onchange="back()">
+        <img class="nextbt"src="./sanpham/nextbt.png" onclick="next()" onchange="next()">
+        <div class="ds">
+            <span id="soanh"></span>
+        </div>
+    </div>
+    <div class="giohang">
+        <a onclick="showcart();" href="Giohang.html"><img src="./sanpham/ghbt2.png"><span id="countsp">0</span></a>
+    </div>   
+    <div class="nagivation">
+        <span id="chung">Đồng Hồ</span> <span id="chung">Điện Thoại</span> <span id="chung">Máy Tính</span> <span id="chung">Khác</span>
+        <a id="dn" href="Dangnhap.html">Đăng Nhập</a> <span id="dk">Đăng Ký</span>
+    </div>
+    <!-- <div id="showcart">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền (đ)</th>
+            </tr>
+            <tbody id="mycart">
+
+            </tbody>
+
+        </table>
+    </div> -->
+    <!-- <div class="content">
+        <div class="sp">  
+            <img src="./sanpham/sp1.jpg" alt="">
+            <p id="ten">TAI NGHE </p>
+            <p><span>500000</span>đ</p>     
+            <br>
+
+            <div class="hh">
+                <label id = "pro" gia="1950">Số Lượng: </label>
+                <input id = "sl" type="number" min="0">
+                <img id="ghbt" src="./sanpham/giohang.jpg">
+            </div>    
+        </div>
+
+        <div class="sp">  
+            <img src="./sanpham/sp5.jpg" alt="">
+            <p id="ten">SAMSUNG GALAXY</p>
+            <p><span>500000</span>đ</p>     
+            <br>
+            <div class="hh">
+                <label id = "pro" gia="1950">Số Lượng: </label>
+                <input id = "sl" type="number" min="0">
+                <img id="ghbt" src="./sanpham/giohang.jpg">
+            </div>         
+        </div>
+
+        <div class="sp">  
+            <img src="./sanpham/sp2.jpg" alt="">
+            <p id="ten">CHUỘT GAMING</p>
+            <p><span>500000</span>đ</p>     
+            <br>
+            <div class="hh">
+                <label id = "pro" gia="1950">Số Lượng: </label>
+                <input id = "sl" type="number" min="0">
+                <img id="ghbt" src="./sanpham/giohang.jpg">
+            </div>         
+        </div>
+
+        <div class="sp">  
+            <img src="./sanpham/sp3.jpeg" alt="">
+            <p id="ten">TAI NGHE</p>
+            <p><span>500000</span>đ</p>     
+            <br>
+            <div class="hh">
+                <label id = "pro" gia="1950">Số Lượng: </label>
+                <input id = "sl" type="number" min="0">
+                <img id="ghbt" src="./sanpham/giohang.jpg">
+            </div>         
+        </div>
+
+        <div class="sp">  
+            <img src="./sanpham/sp4.jpg" alt="">
+            <p id="ten">XIAOMI</p>
+            <p><span>500000</span>đ</p>     
+            <br>
+            <div class="hh">
+                <label id = "pro" gia="1950">Số Lượng: </label>
+                <input id = "sl" type="number" min="0">
+                <img id="ghbt" src="./sanpham/giohang.jpg">
+            </div>         
+        </div> 
+    </div> -->
+    <div class="row mb ">
+        <div class="row">
+            <div class="boxsp mr">
+                <div class="row img"><img src="./sanpham/sp1.jpg" alt=""></div>
+                <p><span>500000</span>đ</p>
+                <a href="#">Đồng hồ</a>
+                <input type="number" name="soluong" min="1" max="10" value="1">
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp mr">
+                <div class="row img"><img src="./sanpham/sp2.jpg" alt=""></div>
+                <p><span>200000</span>đ</p>
+                <a href="#">Chuột Gaming</a>
+                <input type="number" name="soluong" min="1" max="10" value="1">
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp ">
+                <div class="row img"><img src="./sanpham/sp3.jpeg" alt=""></div>
+                <p><span>350000</span>đ</p>
+                <a href="#">Tai Nghe</a>
+                <input type="number" name="soluong" min="1" max="10" value="1">
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp mr">
+                <div class="row img"><img src="./sanpham/sp4.jpg" alt=""></div>
+                <p><span>15444444</span>đ</p>
+                <a href="#">XIAOMI</a>
+                <input type="number" name="soluong" min="1" max="10" value="1">
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp mr">
+                <div class="row img"><img src="./sanpham/sp5.jpg" alt=""></div>
+                <p><span>25000000</span>đ</p>
+                <a href="#">SAMSUNG GLX</a>
+                <input type="number" name="soluong" min="1" max="10" value="1">
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp ">
+                <div class="row img"><img src="./sanpham/sp6.jpg" alt=""></div>
+                <p><span>13000000</span>đ</p>
+                <a href="#">IPHONE X</a>
+                <input type="number" name="soluong" min="1" max="10" value="1">
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp mr">
+                <div class="row img"><img src="./sanpham/sp7.jpg" alt=""></div>
+                <p><span>2100000</span>đ</p>
+                <a href="#">IPHONE 12</a>
+                <input type="number" name="soluong" min="1" max="10" value="1">
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp mr">
+                <div class="row img"><img src="./sanpham/sp8.jpg" alt=""></div>
+                <p><span>2100000</span>đ</p>
+                <a href="#">IPHONE 12</a>
+                <input type="number" name="soluong" min="1" max="10" value="1">
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+            <div class="boxsp ">
+                <div class="row img"><img src="./sanpham/sp9.jpg" alt=""></div>
+                <p><span>1200000</span>đ</p>
+                <a href="#">IPHONE X</a>
+                <input type="number" name="soluong" min="1" max="10" value="1">
+                <button onclick="themvaogiohang(this)">Đặt hàng</button>
+            </div>
+        </div>
+    </div>
+      
+</div>
+    <!-- <script src="ham.js"></script> -->
+    <script>
+        setInterval(loadAnh, 3000);
+    </script>
+</body>
+</html>
